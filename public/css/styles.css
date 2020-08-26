@@ -1,3 +1,18 @@
+body {
+  background-image: url('/img/bg.png');
+  /* for jpgs */
+  /*background-size: cover; /* Scales the image as large as possible without stretching the image.
+							If the proportions of the image differ from the element, it is cropped either vertically or horizontally so that no empty space remains. */
+	/*(background-repeat: no-repeat;*/
+}
+
+div.jumbotron {
+  border-style: solid;
+  border-color: #DADADA;
+  border-width: 1px;
+  background-color: #F2F2F2;
+}
+
 a.btn {
   margin-left: 0.25em;
 }
