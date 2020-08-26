@@ -9,6 +9,12 @@ router.get('/', function(req, res) {
   });
 });
 
+router.get('/example_a', function(req, res) {
+  res.render('Example_A', {
+    title: 'Example_A'
+  });
+});
+
 router.post('/generatePages', function(req, res) {
   res.redirect('/');
 });
