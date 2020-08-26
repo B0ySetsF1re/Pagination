@@ -7,4 +7,8 @@ router.get('/', function(req, res) {
   });
 });
 
+router.post('/generatePages', function(req, res) {
+  res.redirect('/');
+});
+
 module.exports = router;
