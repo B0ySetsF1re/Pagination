@@ -9,7 +9,9 @@
       <div class="row">
 
         <div class="col-sm-3">
-          <a class="btn btn-secondary btn-lg" href="#" role="button">Generate pages...</a>
+          <form method="POST" action="/generatePages">
+            <a class="btn btn-secondary btn-lg" href="#" role="button" onclick="this.closest('form').submit();return false;">Generate pages...</a>
+          </form>
         </div>
 
         <div class="col-sm">
