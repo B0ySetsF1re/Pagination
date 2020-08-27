@@ -16,3 +16,8 @@ div.jumbotron {
 a.btn {
   margin-left: 0.25em;
 }
+
+.invisible {
+  display: none;
+  visibility: hidden;
+}

@@ -7,7 +7,7 @@ router.get('/', function(req, res) {
   if(req.query.error) {
     res.render('index', {
       title: 'Main',
-      error: 'Examples were already generated!'
+      errorMessage: 'Examples were already generated!'
     });
   } else {
     res.render('index', {
