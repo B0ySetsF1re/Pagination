@@ -37,7 +37,7 @@ You can also use **[nodemon](https://www.npmjs.com/package/nodemon)** package, s
   npm install <package_name> --save
   ```
 
-## Pagination functionality
+## Main project files/directories 
 
 You can take a look at ```controllers/paginationController.js``` and check how all things work.
 
