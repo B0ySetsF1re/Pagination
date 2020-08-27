@@ -27,8 +27,7 @@ router.get('/example_c/:page', function(req, res) {
   });
 });
 
-router.post('/generatePages', function(req, res) {
-  res.redirect('/');
-});
+router.post('/generatePages', paginationController.checkIfAlreadyGenerated,
+paginationController.genExampleA, paginationController.genExampleB, paginationController.genExampleC);
 
 module.exports = router;
