@@ -5,7 +5,7 @@ const paginationController = require('../controllers/paginationController');
 
 router.get('/', function(req, res) {
   res.render('index', {
-    title: 'Main page'
+    title: 'Main'
   });
 });
 
