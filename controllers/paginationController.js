@@ -1,10 +1,11 @@
-const User = require('../models/paginationUserModel');
+// Connecting modules
+const User = require('../models/paginationUserModel'); // User model to be used when creating users and generating pages
 
-const mongojs = require('mongojs');
-var db = mongojs('pagination_examples', ['example_a', 'example_b', 'example_c']);
+const mongojs = require('mongojs'); // Defining mongojs module
+var db = mongojs('pagination_examples', ['example_a', 'example_b', 'example_c']); // Database and collections initialization
 
-const LoremIpsum = require("lorem-ipsum").LoremIpsum;
-const lorem = new LoremIpsum({
+const LoremIpsum = require("lorem-ipsum").LoremIpsum; // Defining lorem-ipssum module for generating dummy users
+const lorem = new LoremIpsum({ // Lorem-ipsum middleware config
   sentencesPerParagraph: {
     max: 8,
     min: 4
@@ -15,6 +16,7 @@ const lorem = new LoremIpsum({
   }
 });
 
+// Generating a new users
 async function genNewUser() {
   return new Promise((resolve) => {
     let newUser = {};
@@ -31,6 +33,7 @@ async function genNewUser() {
   });
 }
 
+// Checking if the pages and users were already generated
 exports.checkIfAlreadyGenerated = async (req, res, next) => {
   db.getCollectionNames(function(err, colNames) {
     if(err) {
@@ -46,8 +49,8 @@ exports.checkIfAlreadyGenerated = async (req, res, next) => {
   });
 }
 
+// Generating Example A
 exports.genExampleA = async (req, res, next) => {
-
   for(let i = 0; i < 100; i++) {
     db.example_a.insert(await genNewUser(), (err, user) => {
       if(err) {
@@ -59,6 +62,7 @@ exports.genExampleA = async (req, res, next) => {
   next();
 }
 
+// Generating Example B
 exports.genExampleB = async (req, res, next) => {
   for(let i = 0; i < 110; i++) {
     db.example_b.insert(await genNewUser(), (err, user) => {
@@ -71,6 +75,7 @@ exports.genExampleB = async (req, res, next) => {
   next();
 }
 
+// Generating Example C
 exports.genExampleC = async (req, res, next) => {
   for(let i = 0; i < 200; i++) {
     db.example_c.insert(await genNewUser(), (err, user) => {
@@ -84,6 +89,7 @@ exports.genExampleC = async (req, res, next) => {
   next();
 }
 
+// Initializing pages for the specific collection
 async function pagesInit(page, resPerPage, collection) {
   const foundUsers = await new Promise((resolve, reject) => {
     collection.find({}).limit(resPerPage).skip((resPerPage * page) - resPerPage, function(err, users) {
@@ -113,6 +119,7 @@ async function pagesInit(page, resPerPage, collection) {
   });
 }
 
+// Initializing Example A pages
 exports.exampleAPagesInit = async (req, res, next) => {
   const pageConfig = await pagesInit((req.params.page || 1), 10, db.example_a);
 
@@ -133,6 +140,7 @@ exports.exampleAPagesInit = async (req, res, next) => {
   next();
 }
 
+// Initializing Example B pages
 exports.exampleBPagesInit = async (req, res, next) => {
   const pageConfig = await pagesInit((req.params.page || 1), 10, db.example_b);
 
@@ -153,6 +161,7 @@ exports.exampleBPagesInit = async (req, res, next) => {
   next();
 }
 
+// Initializing Example C pages
 exports.exampleCPagesInit = async (req, res, next) => {
   const pageConfig = await pagesInit((req.params.page || 1), 10, db.example_c);
 
@@ -173,6 +182,7 @@ exports.exampleCPagesInit = async (req, res, next) => {
   next();
 }
 
+// Removing all users and pages (droping database)
 exports.removePages = async (req, res, next) => {
   await new Promise((resolve, reject) => {
     db.getCollectionNames(function(err, colNames) {
