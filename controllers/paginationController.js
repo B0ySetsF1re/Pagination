@@ -80,7 +80,7 @@ exports.genExampleC = async (req, res, next) => {
     });
   }
 
-  res.redirect('/');
+  res.redirect('/example_a/1');
   next();
 }
 
@@ -192,7 +192,6 @@ exports.removePages = async (req, res, next) => {
     if(err) {
       return console.log(err);
     }
-    console.log(result);
   });
 
   res.redirect('/');
