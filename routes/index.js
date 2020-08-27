@@ -9,19 +9,19 @@ router.get('/', function(req, res) {
   });
 });
 
-router.get('/example_a', function(req, res) {
+router.get('/example_a/:page', function(req, res) {
   res.render('Example_A', {
     title: 'Example_A'
   });
 });
 
-router.get('/example_b', function(req, res) {
+router.get('/example_b/:page', function(req, res) {
   res.render('Example_B', {
     title: 'Example_B'
   });
 });
 
-router.get('/example_c', function(req, res) {
+router.get('/example_c/:page', function(req, res) {
   res.render('Example_C', {
     title: 'Example_C'
   });
