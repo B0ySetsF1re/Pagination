@@ -4,9 +4,16 @@ const router = express.Router();
 const paginationController = require('../controllers/paginationController');
 
 router.get('/', function(req, res) {
-  res.render('index', {
-    title: 'Main'
-  });
+  if(req.query.error) {
+    res.render('index', {
+      title: 'Main',
+      error: 'Examples were already generated!'
+    });
+  } else {
+    res.render('index', {
+      title: 'Main'
+    });
+  }
 });
 
 router.get('/example_a/:page', function(req, res) {

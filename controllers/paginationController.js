@@ -38,9 +38,14 @@ exports.checkIfAlreadyGenerated = async (req, res, next) => {
     if(err) {
       return console.log(err);
     }
-  });
 
-  next();
+    if(colNames.length != 0) {
+      res.redirect('/?error=' + encodeURIComponent('alreadyGenerated'));
+    }
+    else {
+      next();
+    }
+  });
 }
 
 exports.genExampleA = async (req, res, next) => {
