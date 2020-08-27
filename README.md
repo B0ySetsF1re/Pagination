@@ -37,7 +37,7 @@ You can also use **[nodemon](https://www.npmjs.com/package/nodemon)** package, s
   npm install <package_name> --save
   ```
 
-## Main project files/directories 
+## Main project files/directories
 
 You can take a look at ```controllers/paginationController.js``` and check how all things work.
 
@@ -51,7 +51,7 @@ views/index.ejs
 views/Example_<A or B or C>
 ```
 
-You may notice that there are note many comments left, but I think they will be added in the near future.
+You may notice that there are not many comments left, but I think they will be added in the near future.
 
 ## Finally
 
