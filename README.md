@@ -37,6 +37,22 @@ You can also use **[nodemon](https://www.npmjs.com/package/nodemon)** package, s
   npm install <package_name> --save
   ```
 
+## Pagination functionality
+
+You can take a look at ```controllers/paginationController.js``` and check how all things work.
+
+Other related files/folders recommended to check:
+
+```
+models/paginationUserModel.js
+routes/index.js
+views/includes/paginationView
+views/index.ejs
+views/Example_<A or B or C>
+```
+
+You may notice that there are note many comments left, but I think they will be added in the near future.
+
 ## Finally
 
 If you're under Windows, then **git** utility should allow you to run node and npm commands (packages) from its shell, so give it a try. :)
