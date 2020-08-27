@@ -3,30 +3,30 @@
 <div class="jumbotron">
   <div class="container">
 
-      <h1 class="display-3">Pagination examples</h1>
-      <p>Please select preferred example...</p>
+    <h1 class="display-3"><a class="text-secondary" href="/">Pagination examples</a></h1>
+    <p>Please select preferred example but make sure to generate them first...</p>
 
-      <div class="row">
+    <div class="row">
 
-        <div class="col-xs">
-          <form method="POST" action="/generatePages">
-            <a class="btn btn-secondary btn-lg" href="#" role="button" onclick="this.closest('form').submit();return false;">Generate pages...</a>
-          </form>
-        </div>
-
-        <div class="col-sm-3">
-          <form method="POST" action="/removePages">
-            <a class="btn btn-secondary btn-lg" href="#" role="button" onclick="this.closest('form').submit();return false;">Remove pages...</a>
-          </form>
-        </div>
-
-        <div class="col-sm">
-          <a class="btn btn-primary btn-lg" href="/example_a/1" role="button">Example A &raquo;</a>
-          <a class="btn btn-warning btn-lg" href="/example_b/1" role="button">Example B &raquo;</a>
-          <a class="btn btn-primary btn-lg" href="/example_c/1" role="button">Example C &raquo;</a>
-        </div>
-
+      <div class="col-xs">
+        <form method="POST" action="/generatePages">
+          <a class="btn btn-secondary btn-lg" href="#" role="button" onclick="this.closest('form').submit();return false;">Generate pages...</a>
+        </form>
       </div>
+
+      <div class="col-sm-3">
+        <form method="POST" action="/removePages">
+          <a class="btn btn-secondary btn-lg" href="#" role="button" onclick="this.closest('form').submit();return false;">Remove pages...</a>
+        </form>
+      </div>
+
+      <div class="col-sm">
+        <a class="btn btn-primary btn-lg" href="/example_a/1" role="button">Example A &raquo;</a>
+        <a class="btn btn-warning btn-lg" href="/example_b/1" role="button">Example B &raquo;</a>
+        <a class="btn btn-primary btn-lg" href="/example_c/1" role="button">Example C &raquo;</a>
+      </div>
+
+    </div>
 
   </div>
 </div>
