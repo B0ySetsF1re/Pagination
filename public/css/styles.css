@@ -17,6 +17,15 @@ a.btn {
   margin-left: 0.25em;
 }
 
+a.page-link {
+  background-color: #F2F2F2;
+  font-weight: bold;
+}
+
+li.page-item.disabled a.page-link {
+  background-color: #F2F2F2;
+}
+
 .invisible {
   display: none;
   visibility: hidden;
