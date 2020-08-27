@@ -17,8 +17,8 @@ a.btn {
   margin-left: 0.25em;
 }
 
-div.col-xs {
-  margin-left: 0.25em;
+form a.btn {
+  margin-left: -0.25em;
 }
 
 a.page-link {

@@ -172,3 +172,29 @@ exports.exampleCPagesInit = async (req, res, next) => {
 
   next();
 }
+
+exports.removePages = async (req, res, next) => {
+  await new Promise((resolve, reject) => {
+    db.getCollectionNames(function(err, colNames) {
+      if(err) {
+        return console.log(err);
+      }
+
+      if(colNames.length == 0) {
+        reject(new Error('Database is empty!'));
+        res.redirect('/?error=' + encodeURIComponent('DataBaseIsEmpty'));
+      }
+      resolve();
+    });
+  });
+
+  db.dropDatabase((err, result) => {
+    if(err) {
+      return console.log(err);
+    }
+    console.log(result);
+  });
+
+  res.redirect('/');
+  next();
+}
