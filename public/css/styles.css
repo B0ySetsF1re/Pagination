@@ -17,6 +17,10 @@ a.btn {
   margin-left: 0.25em;
 }
 
+div.col-xs {
+  margin-left: 0.25em;
+}
+
 a.page-link {
   background-color: #F2F2F2;
   font-weight: bold;
