@@ -16,7 +16,7 @@ const lorem = new LoremIpsum({ // Lorem-ipsum middleware config
   }
 });
 
-// Generating a new users
+// Generating the new users
 async function genNewUser() {
   return new Promise((resolve) => {
     let newUser = {};
