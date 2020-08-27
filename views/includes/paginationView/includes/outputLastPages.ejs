@@ -1,0 +1,8 @@
+<% if(locals.pages && locals.currentPage) { %>
+
+  <li class="page-item disabled"><a class="page-link" href="#"> ... </a></li>
+  <% for(let i = pages - 2; i <= pages; i++) { %>
+    <li class="page-item"><a class="page-link" href="<%= paginationLink + parseInt(i) %>"> <%= i %> </a></li>
+  <% } %>
+
+<% } %>

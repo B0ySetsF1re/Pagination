@@ -1,0 +1,22 @@
+<% if(locals.pages && locals.currentPage) { %>
+  <% let { init, total } = 0; %>
+
+  <% if(pages <= 10) { %>
+    <% init = 1; total = pages; %>
+  <% } else if(currentPage <= 5) { %>
+    <% init = 1; total = 5; %>
+  <% } else if((pages - currentPage) <= 5) { %>
+    <% init = pages - 4; total = pages; %>
+  <% } %>
+
+  <% for(let i = init; i <= total; i++) { %>
+    <% if(i == currentPage) { %>
+      <li class="page-item active" aria-current="page">
+        <a class="page-link" href="<%= paginationLink + parseInt(currentPage) %>"> <%= currentPage %> <span class="sr-only">(current)</span></a>
+      </li>
+    <% } else { %>
+      <li class="page-item"><a class="page-link" href="<%= paginationLink + parseInt(i) %>"> <%= i %> </a></li>
+    <% } %>
+  <% } %>
+
+<% } %>
