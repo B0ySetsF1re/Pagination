@@ -1,5 +1,5 @@
 # Pagination
-##### Feature to separate content with pages
+##### Example of pagination implementation for Node.js, using Bootstrap, EJS and MongoDB (mongoJS driver)
 
 ## NPM and MongoDB installation/configuration
 
