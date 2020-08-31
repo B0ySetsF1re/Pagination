@@ -1,5 +1,9 @@
 # Pagination
+
+![Web App preview](https://i.imgur.com/tqDXe0g.png)
+
 ##### Example of pagination implementation in Node.js, using Bootstrap, EJS and MongoDB (mongoJS driver)
+
 
 ## NPM and MongoDB installation/configuration
 
