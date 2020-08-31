@@ -1,4 +1,4 @@
-function checkForGenError() {
+function checkForError() {
   if($('div#status').text()!='')
       {
                 alert($('div#status').text());
@@ -6,5 +6,5 @@ function checkForGenError() {
 }
 
 window.onload = () => {
-  checkForGenError();
+  checkForError();
 }
