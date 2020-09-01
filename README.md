@@ -25,7 +25,7 @@ Here are the steps on how to clone and configure the repository:
   ```
 * Then in the terminal navigate to the project's folder using **CD** command to install dependencies etc.
 
-* Installing dependencies
+* Installing dependencies:
 
   ```bash
   npm install
