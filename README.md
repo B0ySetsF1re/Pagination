@@ -30,7 +30,7 @@ Here are the steps on how to clone and configure the repository:
   ```bash
   npm install
   ```
-* Running the web app
+* Running the web app:
 
   ```bash
   node app.js
